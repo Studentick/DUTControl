@@ -14,9 +14,14 @@ namespace VirtualDUT
         string id;
         // Тип ДУТа, разные ДУТы имеют разные команды для манипуляции и разный формат ответа
         string dut_type;
+        // Вкл/Выкл опроса
+        bool need_requets;
+        // Статус (Есть контакт - подключение отсутствует)
+        bool is_connected;
 
         public DUT(string id, string type, int zoro = 0)
         {
+            this.need_requets = true;
             this.id = id;
             this.zoro = zoro;
         }
